@@ -80,13 +80,13 @@ footer {
 }
 
 footer a:visited {
-  color: wheat;
+  color: wheat !important;
 }
 
 footer a:hover {
-  color: white;
+  color: white !important;
 }
 
 footer a:active {
-  color: aqua;
+  color: aqua !important;
 }
