@@ -8,6 +8,7 @@ body {
   font-size: 3rem;
   margin:  5%;
   color: #FEF2BF;
+  text-align: center;
 }
 
 .container {
@@ -26,14 +27,16 @@ body {
   border-radius: 20%;
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 992px) {
+
   .container {
-    width: 100%;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
   }
 
   .btn {
-    height: 275px;
-    width: 275px;
   }
 
   #level-title {
