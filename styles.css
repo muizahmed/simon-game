@@ -27,21 +27,23 @@ body {
   border-radius: 20%;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 300px) and (max-width: 992px) {
 
-  .container {
-    width: 75%;
+  #level-title {
+    font-size: 2rem;
+    word-wrap: normal;
+    line-height: 200%;
+  }
+
+  .row {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
   }
 
   .btn {
-  }
-
-  #level-title {
-    word-wrap: normal;
-    line-height: 200%;
+    margin: 10px 10px;
   }
 }
 
