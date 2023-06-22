@@ -26,6 +26,22 @@ body {
   border-radius: 20%;
 }
 
+@media (min-width: 600px) and (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+
+  .btn {
+    height: 275px;
+    width: 275px;
+  }
+
+  #level-title {
+    word-wrap: normal;
+    line-height: 200%;
+  }
+}
+
 .game-over {
   background-color: red;
   opacity: 0.8;
@@ -50,4 +66,22 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+footer {
+  color: white;
+  font-family: 'Didact Gothic', sans-serif;
+  font-weight: 300;
+}
+
+footer a:visited {
+  color: wheat;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer a:active {
+  color: aqua;
 }

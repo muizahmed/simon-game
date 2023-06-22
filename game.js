@@ -12,10 +12,11 @@ startGame();
 
 // Detect a keypress to start the game, this listens for the first keypress only
 function startGame() {
-  $("body").one("keypress", function () {
+  $("body").one("keypress touchend", function (event) {
     //Using "keypress" here instead of "keydown" to make sure that the user is interacting with document.
     //keypress only detects press of printable characters.
     game();
+    event.preventDefault();
   });
 }
 
@@ -27,8 +28,9 @@ function game() {
 
   setTimeout(function () {
     var count = 0;
-    $(".game").click(function (e) {
+    $(".game").on("click", function (e) {
       count++;
+      console.log(count)
       userShowPattern(e);
       gameLogic();
       console.log(gamePattern, userClickedPattern);
