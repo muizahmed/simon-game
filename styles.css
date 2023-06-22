@@ -30,7 +30,7 @@ body {
 @media (min-width: 300px) and (max-width: 992px) {
 
   #level-title {
-    font-size: 2rem;
+    font-size: 150%;
     word-wrap: normal;
     line-height: 200%;
   }

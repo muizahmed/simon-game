@@ -30,7 +30,7 @@ function game() {
     var count = 0;
     $(".game").on("click", function (e) {
       count++;
-      console.log(count)
+      console.log(count);
       userShowPattern(e);
       gameLogic();
       console.log(gamePattern, userClickedPattern);
@@ -55,7 +55,10 @@ function game() {
 function incrementLevel() {
   heading = $("#level-title");
   level++;
-  heading.text(`Level ${level}`);
+  heading.fadeOut(function () {
+    heading.text(`Level ${level}`);
+    heading.fadeIn();
+  });
 }
 
 // Chooses the next color randomly, and adds it to the end of gamePattern array to store the sequence
@@ -118,7 +121,10 @@ function gameLogic() {
 
 // When user loses, play sound and animations to indicate that the game was ended
 function gameEnd() {
-  heading.text("Game Over! Press any key to restart");
+  heading.fadeOut(function () {
+    heading.text("Game Over! Press any key to restart");
+    heading.fadeIn();
+  });
   playSound("wrong");
   $("body").addClass("game-over");
   setTimeout(function () {
